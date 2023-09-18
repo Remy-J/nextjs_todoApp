@@ -2,7 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, to start the fake GraphQL Server type this command from the root of this project (make sure to have [Docker](https://www.docker.com/) running on your machine)
+
+```bash
+docker run -v=${PWD}:/workdir -p=9002:9002 apisguru/graphql-faker ./todo.sdl
+```
+
+The server will be available at `http://localhost:9002/graphql`
+
+run the development server:
 
 ```bash
 npm run dev
